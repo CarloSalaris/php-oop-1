@@ -14,6 +14,18 @@ class Movie {
         $this -> language = $language;
     }
 
+    public function getTitle(){
+        return "Title: " . $this -> title;
+    }
+
+    public function getMovieInfo(){
+        return "Title: " . $this -> title . "<br />" . 
+                "Year: " . $this -> year . "<br />" .
+                "Genre: " . $this -> genre . "<br />" . 
+                "Language: " . $this -> language . "<br />";
+
+    }
+
 }
 
 $movie1 = new Movie("Pulp Fiction", "1994","Pulp", "American-english");
@@ -25,6 +37,13 @@ var_dump($movie1);
 echo "<br><br>";
 var_dump($movie2);
 echo "</pre>";
+
+echo $movie1 -> getMovieInfo();
+echo "<br>";
+
+echo "<br><br>";
+echo $movie2 -> getTitle();
+
 
 
 ?>
