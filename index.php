@@ -7,20 +7,18 @@ class Movie {
     public $genre;
     public $language;
 
+    public function __construct($title, $year, $genre, $language) { //COSTRUTTORE
+        $this -> title = $title;
+        $this -> year = $year;
+        $this -> genre = $genre;
+        $this -> language = $language;
+    }
+
 }
 
-$movie1 = new Movie();
-    $movie1 -> title = "Pulp Fiction";
-    $movie1 -> year = "1994";
-    $movie1 -> genre = "Pulp";
-    $movie1 -> language = "American-english";
+$movie1 = new Movie("Pulp Fiction", "1994","Pulp", "American-english");
 
-$movie2 = new Movie();
-    $movie2 -> title = "The Big Lebowski";
-    $movie2 -> year = "1998";
-    $movie2 -> genre = "comedy";
-    $movie2 -> language = "American-english";
-
+$movie2 = new Movie("The Big Lebowski", "1998", "comedy", "American-english");
 
 echo "<pre>";
 var_dump($movie1);
